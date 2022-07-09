@@ -43,7 +43,7 @@ export default {
       const first = matched[0];
 
       if (!this.isDashboard(first)) {
-        matched = [{ path: "/dashboard", meta: { title: "Dashboard" } }].concat(
+        matched = [{ path: "/dashboard", meta: { title: "首页" } }].concat(
           matched
         );
       }
@@ -84,7 +84,7 @@ export default {
   display: inline-block;
   font-size: 14px;
   line-height: 50px;
-  margin-left: 8px;
+  margin: 0 16px;
 
   .no-redirect {
     color: #97a8be;

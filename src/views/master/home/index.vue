@@ -1,10 +1,10 @@
 <template>
   <div>
-    <p>2222222</p>
-    <p>2222222</p>
-    <p>2222222</p>
-    <p>2222222</p>
-    <p>2222222</p>
+    <div>2222222</div>
+    <div>2222222</div>
+    <div>2222222</div>
+    <div>2222222</div>
+    <div>2222222</div>
   </div>
 </template>
 <script >

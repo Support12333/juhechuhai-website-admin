@@ -6,9 +6,13 @@
       class="hamburger-container"
       @toggleClick="toggleSideBar"
     />
+    <refreshs
+      id="hamburger-container"
+      :is-active="sidebar.opened"
+      class="hamburger-container"
+    />
 
     <breadcrumb id="breadcrumb-container" class="breadcrumb-container" />
-
   </div>
 </template>
 
@@ -16,11 +20,13 @@
 import { mapGetters } from "vuex";
 import Breadcrumb from "./Breadcrumb";
 import Hamburger from "./Hamburger";
+import Refreshs from "./Refreshs";
 
 export default {
   components: {
     Breadcrumb,
     Hamburger,
+    Refreshs,
   },
   computed: {
     ...mapGetters(["sidebar"]),
