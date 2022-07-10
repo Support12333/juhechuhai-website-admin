@@ -118,6 +118,7 @@ export default {
     },
     addTags() {
       const { name } = this.$route;
+      console.log(this.$route,"当前路由")
       if (name) {
         this.$store.dispatch("tagsView/addView", this.$route);
       }

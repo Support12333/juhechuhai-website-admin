@@ -15,10 +15,12 @@ export const asyncRoutes = [
     children: [
       {
         path: 'nacos',
+        name: '主控台',
         component: () => import('@/views/master/home'),
         meta: {
           title: '主控台',
-          noCache: true
+          noCache: true,
+          icon: 'theMain'
         }
       }
     ]
@@ -30,7 +32,7 @@ export const asyncRoutes = [
     redirect: '/OFF/list',
     meta: {
       title: '开户管理',
-      icon: ''
+      icon: 'openAccounts'
     },
     children: [
       {
@@ -55,12 +57,12 @@ export const asyncRoutes = [
   },
   {
     path: '/ADS',
-    name: 'ADS',
+    name: '广告账户',
     component: Layout,
     redirect: '/ADS/workbench',
     meta: {
       title: '广告账户',
-      icon: ''
+      icon: 'advAccount'
     },
     children: [
       {
@@ -87,6 +89,49 @@ export const asyncRoutes = [
         component: () => import('@views/ADS/summary.vue'),
         meta: {
           title: '账号充值历史',
+          noCache: true
+        }
+      }
+    ]
+  },
+  {
+    path: '/master/wallet',
+    name: '钱包管理',
+    component: Layout,
+    redirect: '/master/wallet',
+    meta: {
+      title: '钱包管理',
+      icon: 'advAccount'
+    },
+    children: [
+      {
+        // thebalance
+        path: 'wallet',
+        name: '开户钱包余额',
+        component: () => import('@views/master/wallet'),
+        meta: {
+          title: '开户钱包余额',
+          noCache: true
+        }
+      }
+    ]
+  },
+  {
+    path: '/master/contract',
+    name: '合同管理',
+    component: Layout,
+    redirect: '/master/contract',
+    meta: {
+      title: '合同管理',
+      icon: 'advAccount'
+    },
+    children: [
+      {
+        path: 'contract',
+        name: '合同列表',
+        component: () => import('@views/master/contract'),
+        meta: {
+          title: '合同列表',
           noCache: true
         }
       }
